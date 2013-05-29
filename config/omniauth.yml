@@ -1,0 +1,13 @@
+production: &production
+  google:
+    key: 201139039946-rcgk5qk6vcuhdd1gid3ijuc50802e677.apps.googleusercontent.com
+    secret: VnEdgDab_-DXKoIjMxHN47BT
+
+development: &development
+  <<: *production
+
+staging:
+  <<: *production
+
+test:
+  <<: *development

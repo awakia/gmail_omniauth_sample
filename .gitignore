@@ -14,3 +14,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Commonly unnecessary files to track
+.DS_Store
+*~
+#*#

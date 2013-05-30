@@ -6,5 +6,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
             'https://www.googleapis.com/auth/userinfo.profile',
             #'https://www.googleapis.com/auth/plus.me',
             #'https://www.google.com/m8/feeds',
-            'https://mail.google.com/mail/feed/atom'].join(' ')
+            'https://mail.google.com/'].join(' ')
 end

@@ -26,7 +26,7 @@ class OmniauthCallbacksController < ApplicationController
       email = Email.new
       email.from = mail_address(mail.from)
       email.to = mail_address(mail.to)
-      email.subject = NKF::nkf('-wm', mail.subject)  # MIME decoding
+      email.subject = NKF::nkf('-wm', mail.subject.to_s)  # MIME decoding
       email.date = mail.date
       email.message_id = mail.message_id
       email.in_reply_to = mail.in_reply_to

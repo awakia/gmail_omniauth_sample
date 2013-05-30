@@ -33,7 +33,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
 # use forked gem to use oauth2.0 (c.f. https://github.com/nu7hatch/gmail/pull/80)
-gem 'gmail', github: '90seconds/gmail'
+gem 'gmail', github: 'awakia/gmail'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

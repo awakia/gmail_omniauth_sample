@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/90seconds/gmail.git
-  revision: 650f5968e591e6d320d391ac278c690e39854841
+  remote: git://github.com/awakia/gmail.git
+  revision: cac1f29a0d96ff755c5487ae20c7272aafc292af
   specs:
     gmail (0.4.0)
       gmail_xoauth (>= 0.3.0)

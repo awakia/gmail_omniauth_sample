@@ -22,7 +22,7 @@ class OmniauthCallbacksController < ApplicationController
     gmail = Gmail.connect(:xoauth2, email, token)
     count = gmail.inbox.count
 
-    mails =  gmail.inbox.emails(:unread).map do |mail| #options: :all,:read,:unread
+    mails =  gmail.inbox.emails(:all).map do |mail| #options: :all,:read,:unread
       email = Email.new
       email.from = mail_address(mail.from)
       email.to = mail_address(mail.to)

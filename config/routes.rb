@@ -1,4 +1,6 @@
 Gmail::Application.routes.draw do
+  root 'main#index'
+
   match "auth/:action/callback",
     :constraints => { :action => /google/ },
     :to => 'omniauth_callbacks',

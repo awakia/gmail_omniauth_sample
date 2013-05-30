@@ -10,18 +10,15 @@ class OmniauthCallbacksController < ApplicationController
   def basic_before_action
     @omniauth = request.env['omniauth.auth']
     if @omniauth.present?
-      binding.pry
+      gmail
     end
   end
 
   def gmail
     email = @omniauth.info.email
     token = @omniauth.credentials.token
-    gmail = Gmail.connect(:xoauth, "email@domain.com",
-      :token           => 'TOKEN',
-      :secret          => 'TOKEN_SECRET',
-      :consumer_key    => 'CONSUMER_KEY',
-      :consumer_secret => 'CONSUMER_SECRET'
-    )
+    gmail = Gmail.connect(:xoauth2, email, token)
+    count = gmail.inbox.count
+    binding.pry
   end
 end

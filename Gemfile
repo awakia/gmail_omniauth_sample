@@ -40,6 +40,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem 'binding_of_caller'
+  gem 'better_errors'
+end
+
 group :development, :test do
   gem 'pry'
   gem 'pry-doc'

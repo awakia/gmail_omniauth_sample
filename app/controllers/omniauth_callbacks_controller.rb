@@ -41,7 +41,7 @@ class OmniauthCallbacksController < ApplicationController
       elsif mail.html_part
         body = mail.html_part.decoded
       else
-        body = mail.body.decoded.encode("UTF-8", mail.charset)
+        body = mail.body.decoded.encode("UTF-8", mail.charset) rescue mail.body.to_s
       end
 
       email.save!
